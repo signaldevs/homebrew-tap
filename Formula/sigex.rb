@@ -1,8 +1,8 @@
 class Sigex < Formula
-  desc "A process runner/executor with support for multiple env files"
+  desc "Process runner/executor with support for multiple env files"
   homepage "https://github.com/signaldevs/sigex"
   version "0.0.1"
-  license "GNU Affero General Public License v3.0"
+  license "AGPL-3.0-only"
 
   on_macos do
     if Hardware::CPU.arm?
@@ -29,6 +29,6 @@ class Sigex < Formula
   end
 
   test do
-    assert_match "#{version}", shell_output("#{bin}/sigex --version")
+    assert_match version, shell_output("#{bin}/sigex --version")
   end
 end
