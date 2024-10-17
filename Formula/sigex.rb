@@ -4,6 +4,13 @@ class Sigex < Formula
   version "0.0.1"
   license "AGPL-3.0-only"
 
+  bottle do
+    root_url "https://github.com/signaldevs/homebrew-tap/releases/download/sigex-0.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "0371bae0257ec278b95e29b7190d8c1195667cb29e7d1a253700f90e508667b5"
+    sha256 cellar: :any_skip_relocation, ventura:      "f577f41a6dce41bf32e7839e67fb701ed885f2e9ebc575ae75f89933770047a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c6a61573e1404d13d001ff14f41521534e199d2dfd40c785f8c79a798df294b6"
+  end
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/signaldevs/sigex/releases/download/v#{version}/sigex-darwin-arm64.tar.gz"
