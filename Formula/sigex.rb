@@ -29,6 +29,6 @@ class Sigex < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/sigex --version"), "Version output should match the formula version"
+    assert_match version.to_s, shell_output("#{bin}/sigex --version")
   end
 end
